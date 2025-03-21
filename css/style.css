@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    /*Primary*/
+    --red: hsl(0, 100%, 74%); 
+    --green: hsl(154, 59%, 51%);
+
+    /*Accent*/
+    --blue: hsl(248, 32%, 49%);
+
+    /*Neutral*/
+    --darkBlue: hsl(249, 10%, 26%); 
+    --grayishBlue: hsl(246, 25%, 77%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.title{
+    margin-bottom: 1.5rem;
+    font-size: calc(1rem + 2vw);
+}
+
+.text{
+    font-size: calc(.8rem + .3vw);
+    font-weight: 500;
+}
+
+button,input[type='submit']{
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 3px 0 0 rgba(0,0,0,.5);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+span{
+    font-weight: 700;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#container{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-image: url('../images/bg-intro-mobile.png');
+    background-color: var(--red);
+}
+
+.container__left{
+    max-width: 500px;
+    text-align: center;
+    color: #fff;
+}
+
+.container__right{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.btn-try{
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--blue);
+}
+
+main{
+    width: 100%;
+    max-width: 500px;
+}
+
+form{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 0 0 rgba(0,0,0,.5);
+    background-color: #fff;
+}
+
+.container-input:nth-child(2),.container-input:nth-child(3){
+    margin: 1rem 0;
+}
+
+input{
+    width: 100%;
+    padding: 1rem;
+    font-weight: 600;
+    border: 1px solid var(--grayishBlue);
+    border-radius: 5px;
+}
+
+input:focus{
+    outline: 1px solid var(--darkBlue);
+    color: var(--darkBlue);
+}
+
+#input-submit{
+    margin-top: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background-color: var(--green);
+    transition: filter .2s ease-in;
+    cursor: pointer;
+}
+
+#input-submit:hover{
+    filter: brightness(1.2);
+}
+
+.input,#input-email{
+    background-repeat: no-repeat;
+    background-position: 99% center;
+}
+
+.text-form{
+    margin-top: 1rem;
+    font-size: .7rem;
+    text-align: center;
+    color: var(--grayishBlue);
+}
+
+.text-form span{
+    color: var(--red);
+}
+
+.msg{
+    margin-top: .2rem;
+    font-size: .7rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--red);
+    text-align: right;
+    opacity: 0;
+}
+
+
+@media screen and (min-width:1024px){
+    #container{
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 3rem;
+        background-image: url('../images/bg-intro-desktop.png');
+    }
+
+    .container__left{
+        text-align: left;
+    }
+}
