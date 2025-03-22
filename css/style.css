@@ -44,13 +44,6 @@ span{
     font-weight: 700;
 }
 
-.attribution{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 #container{
     width: 100vw;
     min-height: 100vh;
